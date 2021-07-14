@@ -8,6 +8,15 @@ namespace MarsRover
 
         public Message(string name, Command[] commands)
         {
+            this.Name = name;
+            this.Commands = commands;
+
+            if (String.IsNullOrEmpty(name))
+
+            {
+                throw new ArgumentNullException(name, "Command type required.");
+            }
+
         }
     }
 }
